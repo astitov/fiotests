@@ -1,0 +1,18 @@
+[global]
+ioengine=libaio
+invalidate=1
+direct=1
+group_reporting=1
+filename=temp.file
+filesize=10g
+nrfiles=3
+runtime=10800
+rw=randwrite
+
+[RW block 8k, depth 16, jobs 16]
+startdelay=60
+blocksize=8k
+iodepth=16
+numjobs=16
+write_bw_log=rw3h
+

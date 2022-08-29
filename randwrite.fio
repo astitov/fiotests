@@ -1,0 +1,54 @@
+[global]
+ioengine=libaio
+invalidate=1
+direct=1
+group_reporting=1
+runtime=60
+filename=temp.file
+filesize=10g
+nrfiles=3
+runtime=300
+rw=randwrite
+
+[RW block 8k, depth 16, jobs 16]
+startdelay=60
+stonewall
+blocksize=8k
+iodepth=16
+numjobs=16
+
+[RW block 16k, depth 16, jobs 16]
+startdelay=60
+stonewall
+blocksize=16k
+iodepth=16
+numjobs=16
+
+[RW block 8k, depth 32, jobs 16]
+startdelay=60
+stonewall
+blocksize=8k
+iodepth=32
+numjobs=16
+
+[RW block 16k, depth 32, jobs 16]
+startdelay=60
+stonewall
+blocksize=16k
+iodepth=32
+numjobs=16
+
+[RW block 8k, depth 16, jobs 1]
+startdelay=60
+stonewall
+blocksize=8k
+iodepth=16
+numjobs=1
+
+[RW block 16k, depth 16, jobs 1]
+startdelay=60
+stonewall
+blocksize=16k
+iodepth=16
+numjobs=1
+
